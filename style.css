@@ -8,3 +8,11 @@ body{
 	color: white;
 	text-align: center;
 }
+
+.bodyStyle{
+	margin: 50px;
+	font-family: "Century Gothic", Gothic;
+	font-size: 20px;
+	color: white;
+	width: 30%;
+}
