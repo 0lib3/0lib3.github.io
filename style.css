@@ -1,3 +1,10 @@
 body{
 	background-color: #111111;
 }
+
+.nameStyle{
+	font-family: "Century Gothic", Gothic;
+	font-size: 50px;
+	color: white;
+	text-align: center;
+}
