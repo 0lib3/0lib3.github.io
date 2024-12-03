@@ -19,11 +19,15 @@
 
 .icon{
 	width: 200px;
-	text-align: left;
+	float: left;
 	height: 70px;
-
 }
 
 .logo{
 	color: #ffffff;
+	font-size: 34px;
+	font-family: "Century Gothic", Gothic;
+	padding-left: 20px;
+	float: left;
+	padding-top: 10px;
 }
