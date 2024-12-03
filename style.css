@@ -1,5 +1,9 @@
 body{
-	background-color: #111111;
+	background-image: url(C:\Users\Olivia\Documents\Website\0lib3.github.io\1.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 }
 
 .nameStyle{
