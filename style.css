@@ -77,7 +77,7 @@ ul li a:hover{
 }
 
 .srch{
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	width: 230px;
 	height: 40px;
 	background-color: transparent;
@@ -125,12 +125,12 @@ ul li a:hover{
 	padding-left: 0px;
 	padding-bottom: 25px;
 	padding-top: 25px;
-	font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
-	letter-spacing: 1.2px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 1.5px;
 	line-height: 30px;
 }
 
 .content h1{
-	font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-weight: bold;
 }
