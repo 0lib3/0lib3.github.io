@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+.montserrat-font{
+	font-family: 'Montserrat', 'Arial Narrow', 'Arial', sans-serif;
+}
+
 .main{
 	width: 100%;
 	background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(1.jpg);
@@ -27,8 +31,8 @@
 .logo{
     color: palevioletred;
     font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-left: 20px;
+	font-weight: bold;
 }
 
 .menu{
@@ -46,7 +50,7 @@ ul{
 
 ul li{
 	list-style: none;
-	margin-left: 200px;
+	margin-left: 215px;
 	margin-top: -80px;
 	font-size: 20px;
 }
@@ -69,11 +73,11 @@ ul li a:hover{
 	text-align: right;
 	justify-content: right;
 	margin-top: -50px;
-	margin-right: 100px;
+	margin-right: 25px;
 }
 
 .srch{
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
 	width: 230px;
 	height: 40px;
 	background-color: transparent;
@@ -109,10 +113,24 @@ ul li a:hover{
 }
 
 .content{
-	width: 100%;
+	font-size: 25px;
+	width: 800px;
 	height: auto;
-	margin: auto;
+	margin-top: 30px;
+	transform: translateX(100px); 
 	color: white;
+}
 
+.content .par{
+	padding-left: 0px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 1.2px;
+	line-height: 30px;
+}
 
+.content h1{
+	font-family: 'Montserrat', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
 }
