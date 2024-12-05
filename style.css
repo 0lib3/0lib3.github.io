@@ -12,22 +12,107 @@
 }
 
 .navbar{
-	width: 1200px;
+	width: auto;
 	height: 75px;
-	margin: auto;
+	margin-left: auto;
 }
 
 .icon{
-	width: 200px;
-	float: left;
-	height: 70px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
 }
 
 .logo{
-	color: #ffffff;
-	font-size: 35px;
-	font-family: "Century Gothic", Gothic;
-	padding-left: 20px;
+    color: palevioletred;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 20px;
+}
+
+.menu{
+    margin-left: 100px;
+	margin-top: 5px;
+    text-align: center;
+}
+
+ul{
 	float: left;
-	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul li{
+	list-style: none;
+	margin-left: 200px;
+	margin-top: -80px;
+	font-size: 20px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #ffffff;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+	color: orange;
+}
+
+.search{
+	width: 330px;
+	float: right;
+	text-align: right;
+	justify-content: right;
+	margin-top: -50px;
+	margin-right: 100px;
+}
+
+.srch{
+	font-family: 'Times New Roman', Times, serif;
+	width: 230px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid palevioletred;
+	margin-top: -10px;
+	color:#ffffff;
+	border-right: none;
+	font-size: 16px;
+	float: left;
+	padding: 10px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.btn{
+	width: 100px;
+	height: 40px;
+	background: palevioletred;
+	border: 2px solid palevioletred;
+	margin-top: -10px;
+	color:#ffffff;
+	font-size: 15px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.btn:focus{
+	outline: none;
+}
+
+.srch:focus{
+	outline: none;
+}
+
+.content{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	color: white;
+
+
 }
