@@ -216,11 +216,14 @@ button:focus {
 
 /* Fade In */
 .fade-in-text {
-      font-size: 2rem;
-      color: #333;
-      opacity: 0;
-      animation: fadeIn 2s ease-in forwards;
-    }
+    font-size: 200px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding-top: 200px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
 
     @keyframes fadeIn {
       from {
