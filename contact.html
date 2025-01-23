@@ -2,6 +2,17 @@
 	<head>
 		<title>Olive Belcher</title>
 		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		   (function(){
+			  emailjs.init({
+				publicKey: "7y7miQjEUxjTO5Pb-",
+			  });
+		   })();
+		</script>
+		<script src=script.js></script>
 	</head>
 		<body>
 			<div class="main">
@@ -22,6 +33,31 @@
 						<div class="search">
 							<input class="srch" type="search" name="" placeholder="Type to Text">
 							<a href="#"> <button class="btn">Search</button></a>
+						</div>
+						
+						<div class="parent-container">
+							<div class="form-container">
+								<h1 style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Contact Me</h1>
+								<form>
+								  <div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" id="name" name="name" required>
+								  </div>
+								  <div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" required>
+								  </div>
+								  <div class="form-group">
+									<label for="subject">Subject</label>
+									<input type="text" id="subject" name="subject" required>
+								  </div>
+								  <div class="form-group">
+									<label for="message">Message</label>
+									<textarea id="message" name="message" rows="6" required></textarea>
+								  </div>
+								  <button type="submit" onclick="sendMail()">Send Message</button>
+								</form>
+							  </div>
 						</div>
 		</body>
 </html>
