@@ -222,9 +222,12 @@ button:focus {
     text-align: center;
     padding-top: 200px;
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    transition: opacity 2s ease-in;
 }
 
+.fade-in-text.loaded {
+    opacity: 1;
+}
     @keyframes fadeIn {
       from {
         opacity: 0;
