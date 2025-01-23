@@ -213,3 +213,20 @@ button:active {
 button:focus {
   outline: none;
 }
+
+/* Fade In */
+.fade-in-text {
+      font-size: 2rem;
+      color: #333;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
