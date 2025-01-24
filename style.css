@@ -64,7 +64,7 @@ ul li a:hover{
 	color: orange;
 }
 
-/* Search Bar */
+/* Search Bar
 .search{
 	width: 330px;
 	float: right;
@@ -89,6 +89,7 @@ ul li a:hover{
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
 }
+ */
 
 .btn{
 	width: 100px;
@@ -98,6 +99,7 @@ ul li a:hover{
 	margin-top: -10px;
 	color:#ffffff;
 	font-size: 15px;
+	text-align: center;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
