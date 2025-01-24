@@ -33,8 +33,8 @@
 }
 
 .menu{
-    margin-left: 100px;
-	margin-top: 5px;
+	float: right;
+	margin-right: 300px;
     text-align: center;
 }
 
@@ -92,16 +92,32 @@ ul li a:hover{
  */
 
 .btn{
-	width: 100px;
-	height: 40px;
+	width: 300px;
+	height: 75px;
+	display: block;
+	margin: auto;
 	background: palevioletred;
 	border: 2px solid palevioletred;
-	margin-top: -10px;
-	color:#ffffff;
-	font-size: 15px;
+	color: #ffffff;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 30px;
+	letter-spacing: 1.5px;
 	text-align: center;
+	line-height: 75px;
+	margin-top: 30px;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+ a {
+    text-decoration: none;
+	font-weight: bold;
+	transition: 0.4s ease-in-out;
+}
+a:hover{
+	color: orange;
 }
 
 .btn:focus{
@@ -116,7 +132,6 @@ ul li a:hover{
 	font-size: 25px;
 	width: 800px;
 	height: auto;
-	margin-top: 100px;
 	transform: translateX(100px); 
 	color: white;
 }
