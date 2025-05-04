@@ -111,6 +111,7 @@ self.C3_JsPropNameTable = [
 	{blueFlower: 0},
 	{redFlower: 0},
 	{continue: 0},
+	{Sprite4: 0},
 	{Pickups: 0},
 	{currentMana: 0},
 	{isRegen: 0},
@@ -130,6 +131,10 @@ self.C3_JsPropNameTable = [
 	{dialogLine2: 0},
 	{dialogLine3: 0},
 	{continueLine: 0},
+	{dialogCountWin: 0},
+	{dialogIndexWin: 0},
+	{dialogLine0_Win: 0},
+	{dialogLine1_Win: 0},
 	{dialogIndexOutro: 0},
 	{dialogCountOutro: 0},
 	{dialogLine0_Outro: 0},
@@ -181,5 +186,6 @@ self.InstanceType = {
 	blueFlower: class extends self.ISpriteInstance {},
 	redFlower: class extends self.ISpriteInstance {},
 	continue: class extends self.ITextInstance {},
+	Sprite4: class extends self.ISpriteInstance {},
 	Pickups: class extends self.ISpriteInstance {}
 }
