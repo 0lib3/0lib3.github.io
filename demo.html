@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - OLIVE BELCHER</title>
+    <title>Demo a Game - OLIVE BELCHER</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -20,8 +20,8 @@
             <div class="menu" id="menu" role="menubar">
                 <a href="index.html" role="menuitem">HOME</a>
                 <a href="about.html" role="menuitem">ABOUT</a>
-                <a href="resume.html" class="active" role="menuitem">RESUME</a>
-                <a href="demo.html" role="menuitem">DEMO A GAME</a>
+                <a href="resume.html" role="menuitem">RESUME</a>
+                <a href="demo.html" class="active" role="menuitem">DEMO A GAME</a>
                 <a href="https://github.com/0lib3" target="_blank" rel="noopener noreferrer" role="menuitem">GITHUB</a>
                 <a href="contact.html" role="menuitem">CONTACT</a>
             </div>
@@ -29,14 +29,30 @@
     </nav>
 
     <main id="main-content" class="main">
-        <section class="resume-section" aria-label="Resume">
+        <section class="game-section" aria-label="Game Demo">
             <div class="content-container">
-                <h1 class="section-title">Resume</h1>
-                <iframe src="https://www.dropbox.com/scl/fi/jyd7xd9g06lw9xwitbplx/Olive_Resume.pdf?rlkey=ogi9mr426jlw9z0p2g3dcs5iq&st=7yrj4xgv&raw=1" 
-                        class="resume-frame"
-                        title="Olive Belcher Resume"
-                        aria-label="PDF viewer showing Olive Belcher's resume">
-                </iframe>
+                <h1 class="section-title">Forest Mercy Demo</h1>
+                <p class="game-description">A magical adventure game where you play as a cat with healing powers. Use your abilities to restore the enchanted forest!</p>
+                
+                <div class="game-controls">
+                    <h2>Game Controls</h2>
+                    <ul>
+                        <li><strong>Arrow Keys:</strong> Move around</li>
+                        <li><strong>E:</strong> Use magic</li>
+                        <li><strong>M:</strong> Meow</li>
+                        <li><strong>SPACE:</strong> Continue through dialogs</li>
+                    </ul>
+                </div>
+
+                <div class="game-container">
+                    <iframe 
+                        src="forest-mercy/index.html" 
+                        class="game-frame"
+                        title="Forest Mercy Game Demo"
+                        aria-label="Forest Mercy game iframe"
+                    >
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>
