@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,30 +29,48 @@
         </div>
     </nav>
 
-    <main id="main-content" class="main">
+    <main id="main-content" class="main game-main">
         <section class="game-section" aria-label="Game Demo">
             <div class="content-container">
-                <h1 class="section-title">Forest Mercy Demo</h1>
-                <p class="game-description">A magical adventure game where you play as a cat with healing powers. Use your abilities to restore the enchanted forest!</p>
+                <h1 class="section-title fade-in-text">Forest Mercy <span>Demo</span></h1>
                 
-                <div class="game-controls">
-                    <h2>Game Controls</h2>
-                    <ul>
-                        <li><strong>Arrow Keys:</strong> Move around</li>
-                        <li><strong>E:</strong> Use magic</li>
-                        <li><strong>M:</strong> Meow</li>
-                        <li><strong>SPACE:</strong> Continue through dialogs</li>
-                    </ul>
+                <div class="game-intro">
+                    <p class="game-description">A magical, cozy adventure game where you play as a cat with nature-restoring powers.</p>
+                    <p class="game-subtitle">Use your abilities to restore the beauty of the enchanted forest!</p>
+                </div>
+                
+                <div class="game-wrapper">
+                    <div class="game-container">
+                        <iframe 
+                            src="forest-mercy/index.html" 
+                            class="game-frame"
+                            title="Forest Mercy Game Demo"
+                            aria-label="Forest Mercy game iframe"
+                        >
+                        </iframe>
+                    </div>
                 </div>
 
-                <div class="game-container">
-                    <iframe 
-                        src="forest-mercy/index.html" 
-                        class="game-frame"
-                        title="Forest Mercy Game Demo"
-                        aria-label="Forest Mercy game iframe"
-                    >
-                    </iframe>
+                <div class="game-controls">
+                    <h2><i class="fas fa-gamepad"></i> Game Controls</h2>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <span class="control-key"><i class="fas fa-arrows-alt"></i></span>
+                            <span class="control-desc">Arrow Keys: Move around</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">E</span>
+                            <span class="control-desc">Use magic</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">M</span>
+                            <span class="control-desc">Meow</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">SPACE</span>
+                            <span class="control-desc">Continue dialogs</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

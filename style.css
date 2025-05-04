@@ -326,6 +326,122 @@ textarea {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Game Page */
+.game-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.game-section {
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.game-intro {
+    margin-bottom: 3rem;
+}
+
+.game-description {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.game-subtitle {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.game-wrapper {
+    margin: 0 auto 4rem;
+}
+
+.game-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 67.5%; /* 810/1200 = 0.675 (adjusted aspect ratio) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    border: 3px solid var(--primary-color);
+}
+
+.game-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+.game-controls {
+    background: var(--background-dark);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.game-controls h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.control-item:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px);
+}
+
+.control-key {
+    background: var(--primary-color);
+    min-width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.control-desc {
+    text-align: left;
+    font-size: 1rem;
+}
+
 /* Animations */
 .fade-in-text {
     opacity: 0;
