@@ -77,3 +77,42 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeInText.style.opacity = '1';
     }
 });
+
+// Game scaling
+document.addEventListener('DOMContentLoaded', function() {
+    const gameFrame = document.querySelector('.game-frame');
+    
+    if (gameFrame) {
+        gameFrame.addEventListener('load', function() {
+            try {
+                // Attempt to style the game canvas after iframe loads
+                const iframeDoc = gameFrame.contentDocument || gameFrame.contentWindow.document;
+                
+                // Add scaling styles to the iframe's document
+                const style = iframeDoc.createElement('style');
+                style.textContent = `
+                    body, html {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: transparent !important;
+                    }
+                    canvas {
+                        max-width: 100% !important;
+                        max-height: 100% !important;
+                        width: auto !important;
+                        height: auto !important;
+                        object-fit: contain !important;
+                    }
+                `;
+                iframeDoc.head.appendChild(style);
+            } catch (e) {
+                console.log('Cross-origin restrictions prevent iframe styling');
+            }
+        });
+    }
+});

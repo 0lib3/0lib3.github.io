@@ -331,7 +331,8 @@ textarea {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 5rem 0;
+    justify-content: center;
+    padding: 3rem 0;
 }
 
 .game-section {
@@ -363,14 +364,13 @@ textarea {
 .game-container {
     position: relative;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding-bottom: 67.5%; /* 810/1200 = 0.675 (adjusted aspect ratio) */
-    height: 0;
-    overflow: hidden;
+    aspect-ratio: 1280 / 960;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.5);
     border: 3px solid var(--primary-color);
+    overflow: hidden;
 }
 
 .game-frame {
