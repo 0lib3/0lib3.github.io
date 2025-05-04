@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, inital-scale=1.0">	
-		<title>OLIVE BELCHER</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-		<body>
-			<div class="main">
-				<div class="navbar">
-					<div class="icon">
-						<h2 class="logo">OLIVE BELCHER</h2>
-					</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLIVE BELCHER | Web Design & Game Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">OLIVE BELCHER</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu" id="menu" role="menubar">
+                <a href="index.html" class="active" role="menuitem">HOME</a>
+                <a href="about.html" role="menuitem">ABOUT</a>
+                <a href="resume.html" role="menuitem">RESUME</a>
+                <a href="https://github.com/0lib3" target="_blank" rel="noopener noreferrer" role="menuitem">GITHUB</a>
+                <a href="contact.html" role="menuitem">CONTACT</a>
+            </div>
+        </div>
+    </nav>
 
-					<div class="menu">
-						<ul>
-							<li><a href="https://olivebelcher.dev">HOME</a></li>
-							<li><a href="about.html">ABOUT</a></li>
-							<li><a href="resume.html">RESUME</a></li>
-							<li><a href="https://github.com/0lib3">GITHUB</a></li>
-							<li><a href="contact.html">CONTACT</a></li>
-						</ul>
-					</div>
-					<div class="fade-in-text">OLIVE BELCHER</div>
-					
-					<script>
-					document.addEventListener('DOMContentLoaded', () => {
-					document.querySelector('.fade-in-text').classList.add('loaded');
-					});
-					</script>
-					
-					<a href="about.html" class="btn">ABOUT ME</a>
-		</body>
+    <main id="main-content" class="main">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in-text">OLIVE BELCHER</h1>
+                <p>Web Design & Game Development</p>
+                <a href="about.html" class="btn">ABOUT ME</a>
+            </div>
+        </header>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
