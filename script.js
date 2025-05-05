@@ -116,3 +116,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+ 
+// Disable arrow key scrolling on demo.html page
+ const isDemoPage = window.location.pathname.includes('demo.html');
+    
+ if (isDemoPage) {
+     // Prevent default arrow key behavior
+     document.addEventListener('keydown', function(e) {
+         // Check if the key is an arrow key
+         if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space'].includes(e.key)) {
+             // Prevent the default scrolling behavior
+             e.preventDefault();
+         }
+     });
+     
+     // Alternative method using keycodes for older browsers
+     window.addEventListener('keydown', function(e) {
+         // Arrow keys: 37 (left), 38 (up), 39 (right), 40 (down), 32 (space)
+         const keysToPrevent = [37, 38, 39, 40, 32];
+         if (keysToPrevent.includes(e.keyCode)) {
+             e.preventDefault();
+         }
+     });
+ }
