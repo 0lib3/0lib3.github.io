@@ -119,7 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
  
 // Disable arrow key scrolling on demo.html page
 window.addEventListener("keydown", function(e) {
-    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+    if (["Space", "ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown"].includes(e.key)) {
+        e.preventDefault();
+        return;
+    }
+    
+    // Fallback for older browsers using keyCode
+    if ([32, 37, 38, 39, 40].includes(e.keyCode)) {
         e.preventDefault();
     }
 }, false);
