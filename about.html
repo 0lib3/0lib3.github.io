@@ -7,6 +7,310 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .skills-bar-section {
+            background: rgba(0,0,0,0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-bar-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-bar-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-bar-label span:last-child {
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        .skill-bar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            height: 6px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            width: 0%;
+            transition: width 1.2s ease;
+        }
+
+        /* Project showcase card */
+        .project-showcase {
+            background: rgba(0,0,0,0.7);
+            border: 1px solid rgba(216, 27, 96, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: rgba(216, 27, 96, 0.15);
+            border: 1px solid rgba(216, 27, 96, 0.4);
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .project-showcase h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-showcase p {
+            font-size: 1rem;
+            opacity: 0.85;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-box .stat-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        .stat-box .stat-label {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(255, 145, 0, 0.1);
+            border: 1px solid rgba(255, 145, 0, 0.3);
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-family: 'Inter', monospace;
+        }
+
+        .finding-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .finding-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .finding-list li:last-child {
+            border-bottom: none;
+        }
+
+        .finding-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .project-link.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .project-link.primary:hover {
+            background: var(--secondary-color);
+        }
+
+        .project-link.secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .project-link.secondary:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.4;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.4rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            opacity: 0.8;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* Wide layout */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-grid-full {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .stat-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -31,33 +335,154 @@
     <main id="main-content" class="main">
         <section class="content-section" aria-label="About">
             <div class="content-container">
-                <h1 class="section-title">Web Design & <span>Game Development</span></h1>
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2> My <span>Portfolio</span></h2>
-                        <p>Welcome to Olive Belcher's portfolio website! This website showcases my work in HTML, CSS, and JavaScript, as well as my game development projects in Unreal Engine and Unity.</p>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h2>Current Projects & <span>Future Goals</span></h2>
-                        <p>Currently, I'm working in Unreal Engine and Unity to create unique and entertaining games.</p>
-                        
-                        <p>In the future, I aspire to pursue a career in UI/UX design, where I can combine creativity with user-centered problem solving.</p>
-                        
-                        <p>Additionally, I aim to deepen my research in the field of computer and information ethics, exploring the ethical implications of technology and its impact on society.</p>
-                    </div>
+
+                <!-- Hero -->
+                <div class="about-hero">
+                    <h1 class="section-title fade-in-text">Informatics & <span>Data Analytics</span></h1>
+                    <p>Fourth-year Informatics student at Indiana University building end-to-end data pipelines, interactive game experiences, and accessible web interfaces.</p>
                 </div>
 
-                <div class="quote-section" aria-label="Inspirational quote">
-                    <blockquote>
-                        "You mustn't allow yourself to be chained to fate, to be ruled by your genes. Human beings can choose the kind of life that they want to live. What's important is that you choose life… and then live."
-                    </blockquote>
-                    <cite>- Naomi Hunter, Metal Gear Solid</cite>
+                <div class="about-grid">
+
+                    <!-- Featured Project -->
+                    <div class="about-grid-full">
+                        <div class="project-showcase">
+                            <span class="project-badge">Featured Project</span>
+                            <h3>Metaverse Token Economy Analysis</h3>
+                            <p>An end-to-end data analytics pipeline investigating whether metaverse crypto gaming tokens are viable for in-game economies. Starting from 347 raw CSVs, I built a full data warehouse, wrote analytical SQL, and published a business intelligence dashboard.</p>
+
+                            <div class="stat-row">
+                                <div class="stat-box">
+                                    <span class="stat-num">347</span>
+                                    <span class="stat-label">Tokens Analyzed</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-num">124K</span>
+                                    <span class="stat-label">Rows Cleaned</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-num">76%</span>
+                                    <span class="stat-label">No Recovery Rate</span>
+                                </div>
+                            </div>
+
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">pandas</span>
+                                <span class="tech-tag">CTEs</span>
+                                <span class="tech-tag">Window Functions</span>
+                                <span class="tech-tag">ETL Pipeline</span>
+                                <span class="tech-tag">Metabase</span>
+                                <span class="tech-tag">GitHub</span>
+                            </div>
+
+                            <ul class="finding-list" aria-label="Key findings">
+                                <li>Most tokens lose 90%+ of peak trading volume within 3 months — a direct parallel to player churn</li>
+                                <li>76% of tokens show zero price or volume recovery after a 30%+ crash</li>
+                                <li>Volatility analysis using NTILE() identified only a handful of stable tokens suitable for in-game currency design</li>
+                            </ul>
+
+                            <div class="project-links">
+                                <a href="https://github.com/0lib3/crypto_gaming_pipeline" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                                <a href="resume.html" class="project-link secondary">
+                                    <i class="fas fa-file-alt"></i> Full Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="content-card">
+                        <h2>Technical <span>Skills</span></h2>
+
+                        <div class="skills-bar-section">
+                            <h3>Data & Analytics</h3>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>SQL</span><span>PostgreSQL · CTEs · Window Functions</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Python</span><span>pandas · psycopg2 · ETL</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Data Visualization</span><span>Metabase · PowerBI · Excel</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-bar-section">
+                            <h3>Development</h3>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>HTML / CSS / JS</span><span>Accessible, responsive design</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>Game Development</span><span>Unity · Unreal Engine 5</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                            </div>
+                            <div class="skill-bar-item">
+                                <div class="skill-bar-label"><span>UI/UX Design</span><span>Figma · Adobe · Accessibility</span></div>
+                                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Timeline -->
+                    <div class="content-card">
+                        <h2>Experience & <span>Goals</span></h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Aug 2025 – Present</div>
+                                <h4>Game Design Intern — Indiana University</h4>
+                                <p>Developing workshop curricula covering the full game design pipeline for women and underrepresented groups.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">May – Aug 2025</div>
+                                <h4>UI/UX Intern — Invoke Learning</h4>
+                                <p>Audited and redesigned software tools for a higher education data analytics audience. Authored technical documentation for 5+ database sources and API connectors.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan – Aug 2024</div>
+                                <h4>Technical Animator & Developer — Nocturnus Media</h4>
+                                <p>Designed 2D sprites and UI elements in Unity, delivering production-ready assets in an agile team.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Future Goals</div>
+                                <h4>Data Analytics & UI/UX</h4>
+                                <p>Combining data-driven insight with user-centered design — building products that are both analytically rigorous and intuitive to use.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="about-grid-full">
+                        <div class="quote-section" aria-label="Inspirational quote">
+                            <blockquote>
+                                "You mustn't allow yourself to be chained to fate, to be ruled by your genes. Human beings can choose the kind of life that they want to live. What's important is that you choose life… and then live."
+                            </blockquote>
+                            <cite>— Naomi Hunter, Metal Gear Solid</cite>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Animate skill bars on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+                    bar.style.width = bar.dataset.width + '%';
+                });
+            }, 300);
+        });
+    </script>
 </body>
 </html>
